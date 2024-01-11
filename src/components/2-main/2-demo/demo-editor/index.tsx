@@ -1,7 +1,7 @@
 import { SyntaxHighlighterXml } from "@/components/ui/SyntaxHighlighterXml";
 
-const CODE_ORG = `
-<?xml version="1.0" encoding="UTF-8"?>
+const CODE_ORG = 
+`<?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 	<descriptor
 		id="{85fe3caa-4149-421a-bd17-d37e130d2703}"
@@ -47,7 +47,7 @@ const CODE_ORG = `
 		</form>
 	</forms>
 </manifest>
-`;
+`
 
 export function EditorDemo() {
     return (

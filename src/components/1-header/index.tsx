@@ -10,10 +10,10 @@ export function Section0_Header() {
                 </div>
 
                 <div className="text-2xl font-extralight tracking-tighter text-slate-600">
-                    Language highlighter with
+                    XML/MD highlighter with
                 </div>
                 <div className="text-2xl font-extralight tracking-tighter text-blue-600">
-                    CodeMirror and Lezer AST
+                    React
                 </div>
             </div>
 
