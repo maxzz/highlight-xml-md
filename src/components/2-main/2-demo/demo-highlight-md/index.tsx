@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { marked } from "marked";
-import './markdown.scss';
+import './markdown.css';
 
 const CODE_ORG = 
 `#### version 3.0.364 <span class="date">11.28.2018</span>
@@ -34,10 +34,9 @@ export function HighlightMdDemo() {
     const code = useMemo(() => {
         return marked(CODE_ORG);
     }, []);
-
     return (
         <div className="mx-auto p-4 w-[96%] max-w-[640px] text-xs bg-background border-muted-foreground/50 border rounded-md shadow dark:opacity-60 overflow-auto smallscroll">
-            <div dangerouslySetInnerHTML={{ __html: code }} />
+            <div className="notes max-h-96 px-4 overflow-y-auto bg-slate-100" dangerouslySetInnerHTML={{ __html: code }} />
         </div>
     );
 }
