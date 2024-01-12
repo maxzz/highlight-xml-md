@@ -49,7 +49,7 @@ const CODE_ORG =
 </manifest>
 `
 
-export function EditorDemo() {
+export function HighlightXmlDemo() {
     return (
         <div className="mx-auto p-4 w-[96%] max-w-[640px] text-xs bg-background border-muted-foreground/50 border rounded-md shadow dark:opacity-60 overflow-auto smallscroll">
             <SyntaxHighlighterXml>
