@@ -1,5 +1,6 @@
-import { useMemo } from "react";
+import { HTMLAttributes, useMemo } from "react";
 import { marked } from "marked";
+import { classNames } from "@/utils";
 import './markdown.css';
 
 const CODE_ORG = 
@@ -30,12 +31,12 @@ PM will hide the Chrome browser popup menu for the user name field when mouse is
 * Added feedback icon update on the browser window resize event.
 `
 
-export function HighlightMdDemo() {
+export function HighlightMdDemo({ className, ...rest }: HTMLAttributes<HTMLDivElement>) {
     const markedText = useMemo(() => {
         return marked(CODE_ORG);
     }, []);
     return (
-        <div className="mx-auto p-4 w-[96%] max-w-[640px] text-xs bg-background border-muted-foreground/50 border rounded-md shadow">
+        <div className={classNames("text-xs bg-background", className)} {...rest}>
             <div className="notes max-h-96 px-4 bg-background overflow-y-auto smallscroll" dangerouslySetInnerHTML={{ __html: markedText }} />
         </div>
     );

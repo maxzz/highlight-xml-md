@@ -1,7 +1,9 @@
 import { SyntaxHighlighterXml } from "@/components/ui/SyntaxHighlighterXml";
+import { classNames } from "@/utils";
+import { HTMLAttributes } from "react";
 
-const CODE_ORG = 
-`<?xml version="1.0" encoding="UTF-8"?>
+const CODE_ORG =
+    `<?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 	<descriptor
 		id="{85fe3caa-4149-421a-bd17-d37e130d2703}"
@@ -47,11 +49,11 @@ const CODE_ORG =
 		</form>
 	</forms>
 </manifest>
-`
+`;
 
-export function HighlightXmlDemo() {
+export function HighlightXmlDemo({ className, ...rest }: HTMLAttributes<HTMLDivElement>) {
     return (
-        <div className="mx-auto p-4 w-[96%] max-w-[640px] text-xs bg-background border-muted-foreground/50 border rounded-md shadow dark:opacity-60 overflow-auto smallscroll">
+        <div className={classNames("text-xs dark:opacity-60 overflow-auto smallscroll", className)} {...rest}>
             <SyntaxHighlighterXml>
                 {CODE_ORG}
             </SyntaxHighlighterXml>
