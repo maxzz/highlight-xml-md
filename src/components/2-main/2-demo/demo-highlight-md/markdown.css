@@ -58,22 +58,29 @@
         background-color: #7771;
         border: 1px solid #7772;
     }
-
-    /* .date:is(html.dark) {
-        color: #fff;
-        background-color: #344000;
-        border: 1px solid #402000;
-    } */
 }
 
-/* :where(html.dark .notes .date) {
-    color: #fff;
-    background-color: #344000;
-    border: 1px solid #402000;
-} */
+html.dark .notes {
+    color: #9ebaef;
 
-html.dark .notes .date {
-    color: #afc0fa;
-    background-color: #000240;
-    border: 1px solid #402000;
+    h4 {
+        border-bottom: 1px solid #263f67;
+        color: #bed7fe;
+    }
+
+    a {
+        color: #2275ff;
+    }
+
+    li {
+        &::marker {
+            color: #001845;
+        }
+    }
+
+    .date {
+        color: #afc0fa;
+        background-color: #000240;
+        border: 1px solid #402000;
+    }
 }
