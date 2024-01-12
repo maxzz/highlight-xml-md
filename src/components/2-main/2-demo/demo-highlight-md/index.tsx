@@ -31,12 +31,12 @@ PM will hide the Chrome browser popup menu for the user name field when mouse is
 `
 
 export function HighlightMdDemo() {
-    const code = useMemo(() => {
+    const markedText = useMemo(() => {
         return marked(CODE_ORG);
     }, []);
     return (
-        <div className="mx-auto p-4 w-[96%] max-w-[640px] text-xs bg-background border-muted-foreground/50 border rounded-md shadow dark:opacity-60 overflow-auto smallscroll">
-            <div className="notes max-h-96 px-4 overflow-y-auto bg-slate-100" dangerouslySetInnerHTML={{ __html: code }} />
+        <div className="mx-auto p-4 w-[96%] max-w-[640px] text-xs bg-background border-muted-foreground/50 border rounded-md shadow">
+            <div className="notes max-h-96 px-4 bg-background overflow-y-auto smallscroll" dangerouslySetInnerHTML={{ __html: markedText }} />
         </div>
     );
 }

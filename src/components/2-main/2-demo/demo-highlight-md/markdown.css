@@ -2,7 +2,7 @@
     font-size: .8rem;
     line-height: 22px;
     color: #001845;
-    
+
     h4 {
         margin-top: 1rem;
         margin-bottom: 0;
@@ -37,8 +37,8 @@
 
     li {
         list-style-type: circle;
-        
-        &::marker  {
+
+        &::marker {
             color: #001845;
         }
     }
@@ -51,11 +51,29 @@
         line-height: .65rem;
 
         border-radius: 3px;
-        
+
         font-weight: normal;
 
         color: #000340;
         background-color: #7771;
         border: 1px solid #7772;
     }
+
+    /* .date:is(html.dark) {
+        color: #fff;
+        background-color: #344000;
+        border: 1px solid #402000;
+    } */
+}
+
+/* :where(html.dark .notes .date) {
+    color: #fff;
+    background-color: #344000;
+    border: 1px solid #402000;
+} */
+
+html.dark .notes .date {
+    color: #afc0fa;
+    background-color: #000240;
+    border: 1px solid #402000;
 }
